@@ -2,8 +2,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         App app = new App();
 
-        DateHoliday[] holidays = createHolidayList();
-        app.printHolidays(holidays);
+        app.printHolidays();
         app.isThisDateAHoliday("01-01-2024");
 
     }
@@ -27,7 +26,8 @@ public class App {
         return feriadosLista;
     }
 
-    public void printHolidays(DateHoliday[] holidays) {
+    public void printHolidays() {
+        DateHoliday[] holidays = createHolidayList();
         for (int i = 0; i < holidays.length; i++) {
             if (holidays[i] != null) {
                 System.out.println(
